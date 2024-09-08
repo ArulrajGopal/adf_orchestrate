@@ -1,5 +1,5 @@
 {
-	"name": "Parquet1",
+	"name": "tgtfile",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_adls_target",
