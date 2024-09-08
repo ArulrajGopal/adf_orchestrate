@@ -1,5 +1,5 @@
 {
-	"name": "srcfile",
+	"name": "ds_src",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_adls",
