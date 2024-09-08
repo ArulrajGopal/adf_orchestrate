@@ -9,7 +9,7 @@
 		"annotations": [],
 		"type": "AzureBlobFS",
 		"typeProperties": {
-			"url": "https://target1adls4321.dfs.core.windows.net/",
+			"url": "@{concat('https://',linkedService().storageaccount,'.dfs.core.windows.net/')}",
 			"tenant": "0f46c550-7a7d-4630-b67d-3cb63948aa0a",
 			"servicePrincipalId": "0c171985-1533-4bf0-ac6b-a67a092272d8",
 			"servicePrincipalCredentialType": "ServicePrincipalKey",
