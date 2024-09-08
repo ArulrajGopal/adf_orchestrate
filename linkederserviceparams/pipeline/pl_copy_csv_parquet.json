@@ -54,11 +54,22 @@
 				"outputs": [
 					{
 						"referenceName": "ds_tgt",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"storageaccount": {
+								"value": "@pipeline().parameters.storageaccount",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
 		],
+		"parameters": {
+			"storageaccount": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
