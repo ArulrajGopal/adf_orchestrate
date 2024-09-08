@@ -1,6 +1,5 @@
 {
 	"name": "ls_adls_tg1",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"parameters": {
 			"storageaccount": {
@@ -14,7 +13,18 @@
 			"tenant": "0f46c550-7a7d-4630-b67d-3cb63948aa0a",
 			"servicePrincipalId": "0c171985-1533-4bf0-ac6b-a67a092272d8",
 			"servicePrincipalCredentialType": "ServicePrincipalKey",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDYyQjM0QTNCLUM0RUEtNDNCOS04OEI1LTQ2RDhEOEJCQjY1Rl8zYTE4MjE1NS01MDAzLTQ3ZGMtOTUyNS0zYWNhMmFlMmFkZTciDQp9"
+			"servicePrincipalCredential": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_keyvault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": {
+					"value": "@concat(linkedService().storageaccount,'-key')",
+					"type": "Expression"
+				}
+			}
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
