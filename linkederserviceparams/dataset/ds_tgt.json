@@ -1,0 +1,20 @@
+{
+	"name": "ds_tgt",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_target",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "stud_mark_parquet.parquet",
+				"fileSystem": "output"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
