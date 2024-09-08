@@ -1,6 +1,5 @@
 {
 	"name": "ls_adls",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "AzureBlobFS",
@@ -9,7 +8,15 @@
 			"tenant": "0f46c550-7a7d-4630-b67d-3cb63948aa0a",
 			"servicePrincipalId": "15d91545-6890-40f2-8829-0e3ce4d4b086",
 			"servicePrincipalCredentialType": "ServicePrincipalKey",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDYyQjM0QTNCLUM0RUEtNDNCOS04OEI1LTQ2RDhEOEJCQjY1Rl8xZWMwMDY2OS03MWZjLTRkNjgtOWU0Ny0yZGRlZTc5NWVlZTciDQp9"
+			"servicePrincipalCredential": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_keyvault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "sourceadls4321-key"
+			}
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
