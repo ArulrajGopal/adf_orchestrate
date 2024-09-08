@@ -2,7 +2,7 @@
 	"name": "ds_tgt",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_adls_target",
+			"referenceName": "ls_adls_tg2",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
