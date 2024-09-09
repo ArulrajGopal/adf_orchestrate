@@ -56,20 +56,12 @@
 						"referenceName": "ds_tgt",
 						"type": "DatasetReference",
 						"parameters": {
-							"storageaccount": {
-								"value": "@pipeline().parameters.storageaccount",
-								"type": "Expression"
-							}
+							"storageaccount": "target1adls4321"
 						}
 					}
 				]
 			}
 		],
-		"parameters": {
-			"storageaccount": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }
