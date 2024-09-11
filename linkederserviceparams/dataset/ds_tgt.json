@@ -1,16 +1,6 @@
 {
 	"name": "ds_tgt",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "ls_adls_tg1",
-			"type": "LinkedServiceReference",
-			"parameters": {
-				"storageaccount": {
-					"value": "@dataset().storageaccount",
-					"type": "Expression"
-				}
-			}
-		},
 		"parameters": {
 			"storageaccount": {
 				"type": "string"
