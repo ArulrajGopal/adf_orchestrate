@@ -56,7 +56,8 @@
 						"referenceName": "ds_tgt",
 						"type": "DatasetReference",
 						"parameters": {
-							"storageaccount": "target1adls4321"
+							"storageaccount": "target1adls4321",
+							"appid": "0c171985-1533-4bf0-ac6b-a67a092272d8"
 						}
 					}
 				]
@@ -115,7 +116,8 @@
 						"referenceName": "ds_tgt",
 						"type": "DatasetReference",
 						"parameters": {
-							"storageaccount": "target1adls4321"
+							"storageaccount": "target2adls4321",
+							"appid": "146ca2ff-c9a0-46b7-9d09-e6084bfad2f4"
 						}
 					}
 				]
