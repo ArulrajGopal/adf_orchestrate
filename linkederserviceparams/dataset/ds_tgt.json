@@ -3,11 +3,24 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_adls",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"storageaccount": {
+					"value": "@dataset().storageaccount",
+					"type": "Expression"
+				},
+				"appid": {
+					"value": "@dataset().appid",
+					"type": "Expression"
+				}
+			}
 		},
 		"parameters": {
 			"storageaccount": {
 				"type": "string"
+			},
+			"appid": {
+				"type": "String"
 			}
 		},
 		"annotations": [],
