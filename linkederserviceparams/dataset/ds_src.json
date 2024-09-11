@@ -5,22 +5,8 @@
 			"referenceName": "ls_adls",
 			"type": "LinkedServiceReference",
 			"parameters": {
-				"storageaccount": {
-					"value": "@dataset().storageaccount",
-					"type": "Expression"
-				},
-				"appid": {
-					"value": "@dataset().appid",
-					"type": "Expression"
-				}
-			}
-		},
-		"parameters": {
-			"storageaccount": {
-				"type": "String"
-			},
-			"appid": {
-				"type": "String"
+				"storageaccount": "sourceadls4321",
+				"appid": "15d91545-6890-40f2-8829-0e3ce4d4b086"
 			}
 		},
 		"annotations": [],
