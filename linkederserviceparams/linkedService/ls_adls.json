@@ -1,12 +1,20 @@
 {
 	"name": "ls_adls",
 	"properties": {
+		"parameters": {
+			"storageaccount": {
+				"type": "string"
+			},
+			"appid": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzureBlobFS",
 		"typeProperties": {
-			"url": "https://sourceadls4321.dfs.core.windows.net/",
+			"url": "@{concat('https://',linkedService().storageaccount,'.dfs.core.windows.net/')}",
 			"tenant": "0f46c550-7a7d-4630-b67d-3cb63948aa0a",
-			"servicePrincipalId": "15d91545-6890-40f2-8829-0e3ce4d4b086",
+			"servicePrincipalId": "@{linkedService().appid}",
 			"servicePrincipalCredentialType": "ServicePrincipalKey",
 			"servicePrincipalCredential": {
 				"type": "AzureKeyVaultSecret",
@@ -14,7 +22,7 @@
 					"referenceName": "ls_keyvault",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "sourceadls4321-key"
+				"secretName": "@concat(linkedService().storageaccount,'-key')"
 			}
 		}
 	},
