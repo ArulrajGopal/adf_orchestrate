@@ -1,6 +1,10 @@
 {
 	"name": "ds_tgt",
 	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls",
+			"type": "LinkedServiceReference"
+		},
 		"parameters": {
 			"storageaccount": {
 				"type": "string"
